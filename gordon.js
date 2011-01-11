@@ -42,8 +42,9 @@ var Gordon=function() {
 		renderGordon();
 	}
 };
-var flash=new Gordon();
-
+									////
+var flash=new Gordon();				// <<< CHANGE THE NAME OF THIS VARIABLE IF ITS NAME HAS BEEN TAKEN
+									////
 /**
  * A private helper function that simply slides down the #flash, and after 2 seconds slides it back up. Uses jQuery if it's been included beforehand.
  */

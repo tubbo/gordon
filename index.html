@@ -12,6 +12,10 @@
 		h2 {
 			text-align: right;
 		}
+		form {
+			display: block;
+			padding: 10px 0 10px 0;
+		}
 	</style>
 	<script type="text/javascript" charset="utf-8">
 		$(function() {
@@ -34,11 +38,16 @@
 <body>
 	<div id="flash"></div>
 	<h1>Gordon</h1>
-	<h2>type anything into the input boxes below and hit "ENTER"</h2>
+	<h2>type anything into the input boxes below and hit "ENTER" to see your message</h2>
+	<h2>click the method name to simply display the flash message</h2>
 	<h2>this test uses <a href="http://jquery.com">jQuery v1.4.4</a></h2>
 	
-	<form id="notice">flash.notice(<input type="text" />);</form>
-	<form id="alert">flash.alert(<input type="text" />);</form>
-	<form id="info">flash.info(<input type="text" />);</form>
+	<form id="notice">
+		<a href="javascript:flash.notice()">flash.notice</a>(<input type="text" />);
+	</form>
+	<form id="alert">
+		<a href="javascript:flash.alert()">flash.alert</a>(<input type="text" />);</form>
+	<form id="info">
+		<a href="javascript:flash.info()">flash.info</a>(<input type="text" />);</form>
 </body>
 </html>
