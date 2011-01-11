@@ -7,15 +7,38 @@
 	<title>Gordon Demo</title>
 	<link rel="stylesheet" href="gordon.css" type="text/css" media="screen" title="Gordon()" charset="utf-8">
 	<script src="gordon.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script> <!-- [TODO] change to http://code.jquery.com/jquery-1.4.4.min.js -->
+	<style type="text/css" media="screen">
+		h2 {
+			text-align: right;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('#notice').submit(function() {
+				flash.notice($(this).children('input:first').val());
+				return false;
+			});
+			$('#alert').submit(function() {
+				flash.alert($(this).children('input:first').val());
+				return false;
+			});
+			$('#info').submit(function() {
+				flash.info($(this).children('input:first').val());
+				return false;
+			});
+		});
+	</script>
 </head>
 
 <body>
 	<div id="flash"></div>
-	<h1>flash!</h1>
-	<script type="text/javascript" charset="utf-8">
-		window.onload(function() {
-			flash.notice('ah aaaaaaaah');
-		});
-	</script>
+	<h1>Gordon</h1>
+	<h2>type anything into the input boxes below and hit "ENTER"</h2>
+	<h2>this test uses <a href="http://jquery.com">jQuery v1.4.4</a></h2>
+	
+	<form id="notice">flash.notice(<input type="text" />);</form>
+	<form id="alert">flash.alert(<input type="text" />);</form>
+	<form id="info">flash.info(<input type="text" />);</form>
 </body>
 </html>
