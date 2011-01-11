@@ -1,0 +1,26 @@
+/**
+ * Styles for the Gordon message management plugin
+ */
+
+/* this is the container where all messages are stored */
+#flash {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	line-height: 24px;
+	font-family: Helvetica, sans-serif;
+	background-color: #E1E1E1;
+	text-align: center;
+	border-bottom: 1px solid #000;
+}
+	/* success and default messages */
+	.notice {
+		color: #00BC00;
+		font-size: 14pt;
+	}
+	/* error messages */
+	.alert {
+		color: #D40000;
+		font-size: 16pt;
+	}
