@@ -36,7 +36,9 @@ var Gordon=function() {
 	 */
 	this.info=function(msg) {
 		container.setAttribute('class', 'info');
-		container.innerHTML=msg;
+		if (msg) {
+			container.innerHTML=msg;
+		} 
 		renderGordon();
 	}
 };
@@ -47,12 +49,16 @@ var flash=new Gordon();
  */
 function renderGordon() {
 	var slideRate=3000;	// 3 seconds
-
-	if (typeof jQuery != 'undefined') {
-		$(container).slideDown(500);
-		setTimeout("$(container).slideUp(500);", slideRate);
+	
+	if (container.innerHTML == 'undefined' || container.innerHTML == '') {
+		console.error('You must write a message to the #flash before displaying it.');
 	} else {
-		container.style.display='block';
-		setTimeout("container.style.display='none';", slideRate);
+		if (typeof jQuery != 'undefined') {
+			$(container).slideDown(500);
+			setTimeout("$(container).slideUp(500);", slideRate);
+		} else {
+			container.style.display='block';
+			setTimeout("container.style.display='none';", slideRate);
+		}
 	}
 }
