@@ -24,6 +24,7 @@
 		color: #D40000;
 		font-size: 16pt;
 	}
+	/* informational messages (think Firebug console) */
 	.info {
 		color: #122F99;
 		font-size: 16pt;
