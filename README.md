@@ -28,4 +28,3 @@ Displays the flash with blue text at 16pt. This is also slightly larger, in orde
 * Tom Scott <http://psychedeli.ca/>
 
 Questions? Hit me up on [GitHub](http://github.com/tubbo) or [Twitter](http://twitter.com/tubbo).
-Or you can email me at tubbo (->AT<-) psychedeli (->DOT<-) ca
