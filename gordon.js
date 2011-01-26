@@ -3,6 +3,8 @@
  * To use it, simply include this file and the attached CSS file in your <head> tag. It creates an object called `flash` which is used to reference a persistent status message and write to it 	
  * anywhere JavaScript is acceptable.
  *
+ * Gordon uses jQuery when available for animations. It is NOT required!
+ *
  * @author Tom Scott <http://github.com/tubbo>
  * @license MIT
  */
