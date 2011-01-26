@@ -8,60 +8,23 @@
  * @author Tom Scott <http://github.com/tubbo>
  * @license MIT
  */
-var Gordon=function() {
-	/**
-	 * Constructs the `flash` object that contains the actual flash message
-	 */
-	window.onload=function() {
-		this.container=document.getElementById('flash');
-		this.container.style.display='none';
+(function( $ ){
+  $.fn.flash = function(params) {
+	// default vars
+	var die;
+	var settings = {
+		text: '',
+		scheme: 'notice',
+		delay: 1000
 	};
 	
-	/**
-	 * Notice messages are green colored, and are used to denote a "success" status. 
-	 */
-	this.notice=function(msg) {
-		container.setAttribute('class', 'notice');
-		container.innerHTML=msg;
-		renderGordon();
-	};
-	/**
-	 * Alert messages are colored red, and slightly larger than notice messages. Used to denote errors or any other kind of message that needs special attention.
-	 */
-	this.alert=function(msg) {
-		container.setAttribute('class', 'alert');
-		container.innerHTML=msg;
-		renderGordon();
-	};
-	/**
-	 * Info messages are blue in color and the same size as alert messages.
-	 */
-	this.info=function(msg) {
-		container.setAttribute('class', 'info');
-		if (msg) {
-			container.innerHTML=msg;
-		} 
-		renderGordon();
-	}
-};
-									////
-var flash=new Gordon();				// <<< CHANGE THE NAME OF THIS VARIABLE IF ITS NAME HAS BEEN TAKEN
-									////
-/**
- * A private helper function that simply slides down the #flash, and after 2 seconds slides it back up. Uses jQuery if it's been included beforehand.
- */
-function renderGordon() {
-	var slideRate=3000;	// 3 seconds
-	
-	if (container.innerHTML == 'undefined' || container.innerHTML == '') {
-		console.error('You must write a message to the #flash before displaying it.');
+	// set up the flash object and its parameters
+	if (typeof params != 'string') {
+		settings.text = params;
+		die=false;
 	} else {
-		if (typeof jQuery != 'undefined') {
-			$(container).slideDown(500);
-			setTimeout("$(container).slideUp(500);", slideRate);
-		} else {
-			container.style.display='block';
-			setTimeout("container.style.display='none';", slideRate);
-		}
+		$.fn.extend(settings, params);															// set up the flash jQuery object
+		die=false;
 	}
-}
+  };
+})( jQuery );

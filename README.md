@@ -1,5 +1,5 @@
-# Gordon. Flash Gordon.
-**Gordon** is a plugin that manages the display of error messages using pure JavaScript. Although it can (and does) bind to existing frameworks to save speed and fit in better with its environment. While Gordon is framework-agnostic, it does require that you leave the variable `flash` open.
+# Gordon. jQuery Style
+**Gordon** is a plugin that manages the display of error messages using pure JavaScript. This is a branch geared towards jQuery users so the plugin is chainable and easy to use with jQuery.
 
 Questions? Problems? Hit me up on Twitter ([@tubbo](http://twitter.com/tubbo).) or just [shoot me a message](http://github.com/inbox/new/tubbo).
 
@@ -10,16 +10,10 @@ Questions? Problems? Hit me up on Twitter ([@tubbo](http://twitter.com/tubbo).) 
 * * *
 
 ## Usage
-To get started using Gordon, all you have to do is include `gordon.js` and `gordon.css` in your web application. Then, invoke one of the following commands to see it in action!
+To get started using Gordon, all you have to do is include `jquery.gordon.js` and `gordon.css` in your web application. Then, invoke it!
 
-### flash.notice("message");
-Displays the flash with green, 14pt text.
-
-### flash.alert("message");
-Displays the flash with red text at 16pt, slightly larger than the default format.
-
-### flash.info("message");
-Displays the flash with blue text at 16pt. This is also slightly larger, in order to denote special text that may require magnification
+### $('#your-flash-element-id').flash('a flash message');
+for simple, notice-based queries
 
 #### **NOTE:** You can opt to just display the last set status message by invoking the `flash.` methods without any arguments.
 
