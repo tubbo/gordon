@@ -14,7 +14,17 @@ var Gordon=function() {
 	 */
 	window.onload=function() {
 		this.container=document.getElementById('flash');
-		this.container.style.display='none';
+		
+		// make sure the #flash element exists before proceeding
+		if (this.container.length > -1) {
+			this.container.style.display='none';
+		} else {
+			if (typeof console != 'undefined') {
+				console.error('Please create <div id="#flash"></div> somewhere in this HTML file, or Gordon can not run.');
+			} else {
+				alert('Please create <div id="#flash"></div> somewhere in this HTML file, or Gordon can not run.');
+			}
+		}
 	};
 	
 	/**
