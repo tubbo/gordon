@@ -16,22 +16,22 @@ First of all, include **gordon.js** and **gordon.css** in the `<head>` tag of yo
 
 Then, instantiate the plugin with the ID of your element (default is "flash"). Make sure this is consistent with the id in your CSS.
 
-  var flash = new Gordon("flash");
+    var flash = new Gordon("flash");
 
 Usage
 -----
 
 Gordon has three methods that can be used at any time in your JS code.
 
-  flash.notice("message");
+    flash.notice("message");
 
 Displays the flash with green, 14pt text.
 
-  flash.alert("message");
+    flash.alert("message");
 
 To display the flash with red text at 16pt, slightly larger than the default format
 
-  flash.info("message");
+    flash.info("message");
 
 Displays the flash with blue text at 16pt. This is also slightly larger, in order to denote special text that may require magnification
 
