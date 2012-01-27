@@ -1,16 +1,24 @@
-# Gordon. Flash Gordon.
-**Gordon** is a plugin that manages the display of error messages using pure JavaScript. Although it can (and does) bind to existing frameworks to save speed and fit in better with its environment. While Gordon is framework-agnostic, it does require that you leave the variable `flash` open.
+Gordon. Flash Gordon.
+=====================
 
-Questions? Problems? Hit me up on Twitter ([@tubbo](http://twitter.com/tubbo).) or just [shoot me a message](http://github.com/inbox/new/tubbo).
+**Gordon** is a plugin that manages the display of error messages using pure JavaScript. It was inspired by Twitter's means of displaying the flash.
 
-## Features
+Features
+--------
+
 * Three display formats ("notice", "alert" and "info"), all configurable using the bundled CSS file.
 * Uses [jQuery](http://jquery.com/) for speedy animations, when available.
 
-* * *
+Installation
+------------
 
-## Usage
-To get started using Gordon, all you have to do is include `gordon.js` and `gordon.css` in your web application. Then, invoke one of the following commands to see it in action!
+First of all, include **gordon.js** and **gordon.css** in the `<head>` tag of your page.
+
+Then, instantiate the plugin with the ID of your element (default is "flash"). Make sure this is consistent with the id in your CSS.
+  var flash = new Gordon("flash");
+
+Usage
+-----
 
 ### flash.notice("message");
 Displays the flash with green, 14pt text.
@@ -23,11 +31,10 @@ Displays the flash with blue text at 16pt. This is also slightly larger, in orde
 
 #### **NOTE:** You can opt to just display the last set status message by invoking the `flash.` methods without any arguments.
 
-* * *
+License
+-------
 
-## License
-
-Copyright (c) 2011 Tom J. Scott <<http://psychedeli.ca>>
+Copyright (c) 2011-2012 Tom Scott <<http://psychedeli.ca>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
