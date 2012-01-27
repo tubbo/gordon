@@ -1,13 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Gordon Demo</title>
 	<link rel="stylesheet" href="gordon.css" type="text/css" media="screen" title="Gordon()" charset="utf-8">
-	<script src="gordon.js" type="text/javascript" charset="utf-8"></script>
-	<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>
 	<style type="text/css" media="screen">
 		h2 {
 			text-align: right;
@@ -17,8 +14,13 @@
 			padding: 10px 0 10px 0;
 		}
 	</style>
+	<script src="gordon.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
+		var flash = new Gordon("flash");
+
 		$(function() {
+			// custom message actions
 			$('#notice').submit(function() {
 				flash.notice($(this).children('input:first').val());
 				return false;
@@ -31,23 +33,30 @@
 				flash.info($(this).children('input:first').val());
 				return false;
 			});
+			// basic display action(s)
+			$('a').click(function() {
+				var action = $(this).attr('data-action');
+				flash.call(action);
+			});
 		});
 	</script>
 </head>
 
 <body>
 	<div id="flash"></div>
+
 	<h1>Gordon</h1>
 	<h2>type anything into the input boxes below and hit "ENTER" to see your message</h2>
 	<h2>click the method name to simply display the flash message</h2>
-	<h2>this test uses <a href="http://jquery.com">jQuery v1.4.4</a></h2>
-	
+
 	<form id="notice">
-		<a href="javascript:flash.notice()">flash.notice</a>(<input type="text" />);
+		<a href="#" data-action="notice">flash.notice</a>(<input type="text" />);
 	</form>
 	<form id="alert">
-		<a href="javascript:flash.alert()">flash.alert</a>(<input type="text" />);</form>
+		<a href="#" data-action="alert">flash.alert</a>(<input type="text" />);
+	</form>
 	<form id="info">
-		<a href="javascript:flash.info()">flash.info</a>(<input type="text" />);</form>
+		<a href="#" data-action="info">flash.info</a>(<input type="text" />);
+	</form>
 </body>
 </html>

@@ -63,13 +63,8 @@ var Gordon=function(id) {
 		if (container.innerHTML == 'undefined' || container.innerHTML == '') {
 			console.error('You must write a message to the #flash before displaying it.');
 		} else {
-			if (typeof jQuery != 'undefined') {
-				$(container).slideDown(500);
-				setTimeout("$(container).slideUp(500);", slideRate);
-			} else {
-				container.style.display='block';
-				setTimeout("container.style.display='none';", slideRate);
-			}
+			container.style.display='block';
+			setTimeout("container.style.display='none';", slideRate);
 		}
 	}
 
