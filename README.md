@@ -23,17 +23,20 @@ Usage
 
 Gordon has three methods that can be used at any time in your JS code.
 
+
+To display the flash with green, 14pt text...
+
     flash.notice("message");
 
-Displays the flash with green, 14pt text.
+To display the flash with red text at 16pt, slightly larger than the default format...
 
     flash.alert("message");
 
-To display the flash with red text at 16pt, slightly larger than the default format
+To display the flash with blue text at 16pt...
 
     flash.info("message");
 
-Displays the flash with blue text at 16pt. This is also slightly larger, in order to denote special text that may require magnification
+This is also slightly larger, in order to denote special text that may require magnification
 
 #### **NOTE:** You can opt to just display the last set status message by invoking the `flash.` methods without any arguments.
 
