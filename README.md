@@ -3,12 +3,6 @@ Gordon. Flash Gordon.
 
 **Gordon** is a plugin that manages the display of error messages using pure JavaScript. It was inspired by Twitter's means of displaying the flash.
 
-Features
---------
-
-* Three display formats ("notice", "alert" and "info"), all configurable using the bundled CSS file.
-* Uses [jQuery](http://jquery.com/) for speedy animations, when available.
-
 Installation
 ------------
 
