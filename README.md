@@ -38,7 +38,7 @@ To display the flash with blue text at 16pt...
 
 This is also slightly larger, in order to denote special text that may require magnification
 
-#### **NOTE:** You can opt to just display the last set status message by invoking the `flash.` methods without any arguments.
+**NOTE: You can opt to just display the last set status message by invoking the `flash.` methods without any arguments.**
 
 License
 -------
