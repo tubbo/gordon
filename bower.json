@@ -1,0 +1,25 @@
+{
+  "name": "gordon",
+  "main": "gordon.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tubbo/gordon",
+  "authors": [
+    "Tom Scott <tubbo@psychedeli.ca>"
+  ],
+  "description": "Universal message display for the browser.",
+  "keywords": [
+    "error",
+    "warning",
+    "notice",
+    "message",
+    "display"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
